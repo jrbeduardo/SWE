@@ -76,7 +76,8 @@ def realizar_busqueda(request):
 	if request.method == "GET":
 		busqueda = request.GET.get('busqueda')
 		id_tema=int(request.GET.get('tema'))
-		if id_tema!=16:
+		nombre_tema = Reactivo.objects.get(id=id_tema).nombre
+		if nombre_tema!='Todos':
 			reactivos=Reactivo.objects.filter(
 				Q(pregunta__icontains=busqueda)|Q(respuesta__icontains=busqueda),
 				tema=id_tema
