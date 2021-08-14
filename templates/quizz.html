@@ -1,0 +1,50 @@
+{% extends 'base.html' %}  
+
+
+{% block contenido %}
+
+
+{% if reactivos %}
+<div class='container'>
+  <h3>B&uacute;squeda: <strong>{{busqueda}}</strong> </h3>
+  <hr>
+  <div class='row my-2'>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <th scope="col">#</th>
+          <th scope="col">Pregunta</th>         
+          <th scope="col">Respuesta</th>
+          <th scope="col">Opciones</th>
+        </thead>
+        <tbody>
+        {% for item in reactivos %}
+          <tr>
+            <th scope='row'>
+              {{ forloop.counter }}
+            </th>
+            <td>{{ item.pregunta }}</td>
+            <td>{{ item.respuesta }}</td>
+            <td> <a href="{% url 'editar_reactivo' item.id %}">Editar</a> 
+            <a href="{% url 'eliminar_reactivo' item.id %}">Eliminar</a>
+            </td>
+
+          </tr>         
+        {% endfor %} 
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+	<h3>No se encontro nada</h3>
+
+{% endif  %}
+
+
+
+
+{% endblock %}
+

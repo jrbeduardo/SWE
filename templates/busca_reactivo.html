@@ -1,0 +1,27 @@
+{% extends 'base.html'%}  
+{% load static %}
+
+
+{% block contenido %}
+
+
+
+<form class="row g-3" method="GET" id = 'id_busqueda'>
+  {{ busqueda_form.as_table }}
+  <button type="submit" class="btn btn-primary">buscar</button>
+</form>
+
+<br>
+
+
+<div id='id_quizzes'></div>
+
+{% endblock %} 
+
+
+{% block scripts%}
+
+<script src="{% static 'js/reactivos/index.js' %}"></script>
+
+{% endblock %} 
+

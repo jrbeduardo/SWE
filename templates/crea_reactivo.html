@@ -1,0 +1,16 @@
+{% extends 'base.html'%}  
+
+{% block Cabezera %} Reactivo {% endblock Cabezera %}
+
+{% block contenido %}
+
+<form class="row g-3" method="POST">
+	{% csrf_token %}
+	{% if error %}
+		<h2>{{ error }}</h2>
+	{% else %}
+		{{ form_reactivo }}
+	{% endif%}
+  <button type="submit" class="btn btn-primary">enviar</button>
+</form>
+{% endblock %} 
