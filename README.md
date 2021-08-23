@@ -12,4 +12,6 @@
 
 # Quizzes
 
-<img src="screenshots/q1.png " width="500"> <img src="screenshots/q2.png " width="500">
+[sitio web](https://vast-dusk-39641.herokuapp.com/quizzes/home/)
+
+![](screenshots/q1.png)
