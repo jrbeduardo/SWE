@@ -12,6 +12,6 @@
 
 # Quizzes
 
-![drawing](screenshots/q1.png | width=50) 
+<img src="screenshots/q2.png " width="200" height="200">
 
-![drawing](screenshots/q2.png | width=50)
+<img src="screenshots/q2.png " width="200" height="200">
