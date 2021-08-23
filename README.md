@@ -12,5 +12,5 @@
 
 # Quizzes
 
-![](screenshots/q1.png)
-![](screenshots/q2.png)
+![](screenshots/q1.png =100x20)
+![](screenshots/q2.png =100x20)
