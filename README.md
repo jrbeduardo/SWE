@@ -12,4 +12,6 @@
 
 # Quizzes
 
-![drawing](screenshots/q1.png){ width=50% } ![drawing](screenshots/q2.png){ width=50% }
+![drawing](screenshots/q1.png){ width=50%; } 
+
+![drawing](screenshots/q2.png){ width=50%; }
