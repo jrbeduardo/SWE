@@ -12,5 +12,4 @@
 
 # Quizzes
 
-![](screenshots/q1.png =100x20)
-![](screenshots/q2.png =100x20)
+![](screenshots/q1.png){ width=50% } ![](screenshots/q2.png){ width=50% }
