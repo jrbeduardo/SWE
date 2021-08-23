@@ -11,4 +11,6 @@
 9. Evolución y Tendencias 
 
 # Quizzes
-[q1.png]
+
+![](q1.png)
+![](q2.png)
