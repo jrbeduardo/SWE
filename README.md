@@ -12,6 +12,6 @@
 
 # Quizzes
 
-<img src="screenshots/q2.png " width="200" height="200">
+<img src="screenshots/q2.png " width="400">
 
-<img src="screenshots/q2.png " width="200" height="200">
+<img src="screenshots/q2.png " width="400">
