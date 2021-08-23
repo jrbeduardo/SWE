@@ -1,6 +1,6 @@
 {% extends 'base.html'%}  
 
-{% block Cabezera %} Reactivo {% endblock Cabezera %}
+{% block Cabezera %} Tema {% endblock Cabezera %}
 
 {% block contenido %}
 
@@ -9,7 +9,7 @@
 	{% if error %}
 		<h2>{{ error }}</h2>
 	{% else %}
-		{{ form_reactivo }}
+		{{ form.as_table }}
 	{% endif%}
   <button type="submit" class="btn btn-primary">registrar</button>
 </form>

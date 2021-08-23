@@ -21,9 +21,9 @@ function listaReactivos() {
 							+response[i].respuesta
 							+"</em><br><br><a href='/quizzes/editar_reactivo/"
 							+response[i].id
-							+"'>Editar</a> <a href='/quizzes/eliminar_reactivo/"
+							+"'><img src='https://img.icons8.com/pastel-glyph/36/000000/loop.png'/></a> <a href='/quizzes/eliminar_reactivo/"
 							+ response[i].id
-							+"'>Eliminar</a></li>"
+							+"'><img src='https://img.icons8.com/ios/36/000000/delete-forever--v2.png'/></a></li>"
 						);
 					}
 					$('#id_quizzes').prepend("</ul>");

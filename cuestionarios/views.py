@@ -1,12 +1,12 @@
 import json
-
 from django.core.serializers import serialize
 from django.views.generic import View
+from django.views.generic.edit import CreateView
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
-
+from django.urls import reverse_lazy
 from .models import Reactivo, Tema
 from .forms import BusquedaFormulario, CrearReactivo
 
@@ -74,7 +74,7 @@ def eliminar_reactivo(request, id):
 
 def realizar_busqueda(request):
 	if request.method == "GET":
-		busqueda = request.GET.get('busqueda')
+		busqueda = request.GET.get('busqueda') or ' '
 		id_tema=int(request.GET.get('tema'))
 		nombre_tema = Tema.objects.get(id=id_tema).nombre
 		if nombre_tema!='Todos':
@@ -97,3 +97,9 @@ def realizar_busqueda(request):
 		return HttpResponse(json.dumps(data), 'application/json')
 	else:
 		return redirect('home')
+
+class CrearTema(CreateView):
+	model = Tema
+	fields = '__all__'
+	template_name = 'crea_tema.html' 
+	success_url = reverse_lazy('home')

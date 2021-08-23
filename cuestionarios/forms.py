@@ -10,7 +10,9 @@ class BusquedaFormulario(forms.ModelForm):
 		fields = ['tema']
 		widgets = {
         	'tema': forms.Select(
-        		attrs={'id': 'id_tema'}
+        		attrs={
+        			'id': 'id_tema',
+        			'class': 'form-control'}
         	),
         }
 
@@ -18,12 +20,29 @@ class BusquedaFormulario(forms.ModelForm):
 		super(BusquedaFormulario, self).__init__(*args, **kwargs)
 		self.fields['busqueda'].widget = forms.TextInput(attrs={
 			'id': 'id_text',
-			'placeholder': 'Say something ...'}
+			'placeholder': 'escribe algo ...',
+			'class': 'form-control'}
 		)
 
 
 class CrearReactivo(forms.ModelForm):
 	class Meta:
 		model = Reactivo
-		fields = ['tema', 'respuesta', 'pregunta']
+		fields = ['tema', 'pregunta', 'respuesta']
+		widgets = {
+			'tema': forms.Select(
+        		attrs={
+        			'id': 'id_tema',
+        			'class': 'form-control'}), 
+      'respuesta': forms.Textarea(
+        		attrs={
+        			'id': 'id_tema',
+        			'class': 'form-control',
+        			'rows': "4"}), 
 
+      'pregunta': forms.Textarea(
+        		attrs={
+        			'id': 'id_tema',
+        			'class': 'form-control',
+        			'rows': "4"})
+		}
